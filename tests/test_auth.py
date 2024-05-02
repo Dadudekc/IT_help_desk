@@ -1,3 +1,7 @@
+
+#test_auth.py
+#to run type : python -m pytest C:\Users\Dagurlkc\ai_it_help_desk\tests\test_auth.py
+
 from httpx import AsyncClient
 import pytest
 from app.main import app

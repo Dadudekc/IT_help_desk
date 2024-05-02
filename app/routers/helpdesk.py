@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from ..utils.database import get_db
-from ..services.nlp_service import NLPServices
+from ..services.nlp_services import NLPServices
 
 
 router = APIRouter()
