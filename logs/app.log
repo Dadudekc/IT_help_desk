@@ -1,0 +1,29 @@
+2024-10-30 00:41:57 - INFO - Starting IT Help Desk Application.
+2024-10-30 00:41:57 - INFO - Authenticated user ID: 3 with role: staff
+2024-10-30 00:43:32 - INFO - Application started.
+2024-10-30 00:44:40 - INFO - Starting IT Help Desk Application.
+2024-10-30 00:44:40 - INFO - Authenticated user ID: 3 with role: staff
+2024-10-30 00:44:49 - INFO - Application started.
+2024-10-30 00:45:14 - INFO - Starting IT Help Desk Application.
+2024-10-30 00:45:14 - INFO - Authenticated user ID: 3 with role: staff
+2024-10-30 00:45:14 - INFO - Application started.
+2024-10-30 00:52:42 - INFO - Starting IT Help Desk Application.
+2024-10-30 00:52:42 - INFO - Authenticated user ID: 3 with role: staff
+2024-10-30 00:52:42 - INFO - Application started.
+2024-10-30 00:56:28 - INFO - Starting IT Help Desk Application.
+2024-10-30 00:56:28 - INFO - Authenticated user ID: 3 with role: staff
+2024-10-30 00:56:28 - INFO - Application started.
+2024-10-30 00:57:10 - INFO - Starting IT Help Desk Application.
+2024-10-30 00:57:10 - INFO - Authenticated user ID: 3 with role: staff
+2024-10-30 00:57:10 - INFO - Application started.
+2024-10-30 01:03:22 - INFO - Starting IT Help Desk Application.
+2024-10-30 01:03:22 - INFO - Authenticated user ID: 3 with role: staff
+2024-10-30 01:03:22 - INFO - Application started.
+2024-10-30 01:06:35 - INFO - Starting IT Help Desk Application.
+2024-10-30 01:06:35 - INFO - Authenticated user ID: 3 with role: staff
+2024-10-30 01:06:35 - INFO - Application started.
+2024-10-30 01:06:35 - INFO - Retrieved 0 tickets for user ID 3.
+2024-10-30 01:06:35 - INFO - Loaded tickets for user ID 3 in View Tickets tab.
+2024-10-30 01:06:35 - INFO - Retrieved 0 tickets with status 'None'.
+2024-10-30 01:06:35 - INFO - Tickets loaded into Manage Tickets tab.
+2024-10-30 01:15:02 - INFO - Application closed via closeEvent.

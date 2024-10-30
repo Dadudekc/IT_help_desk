@@ -1,0 +1,189 @@
+IT Help Desk Application
+An IT Help Desk application built with PyQt5, SQLite, and Mistral 7B for managing tickets, providing user support, and automating troubleshooting through AI assistance. This application features role-based access control, real-time analytics, and a flexible UI tailored for various roles within an IT support team.
+
+Table of Contents
+Project Overview
+Features
+Installation
+Configuration
+Usage
+Project Structure
+Future Improvements
+Project Overview
+This multifaceted IT Help Desk system allows users to submit and manage support tickets, track issue status, and access AI-assisted troubleshooting. The application provides different functionalities based on user roles, including ticket assignment, viewing real-time analytics, and administering the system.
+
+Features
+Role-Based Access and Permissions:
+
+User: Submit and view their tickets.
+Technician: Manage and resolve tickets.
+Manager: Assign tickets, view reports, and manage technicians.
+Admin: Configure the system, manage users, and view comprehensive analytics.
+Ticket Management:
+
+Advanced ticket submission, tracking, and assignment.
+Status and priority management with notifications and alerts for priority cases.
+AI Assistance (Mistral 7B):
+
+AI-powered initial responses with potential troubleshooting suggestions.
+Categorization and suggested ticket assignments based on historical data.
+Real-Time Analytics and Reporting:
+
+Ticket status metrics and resolution times.
+SLA and escalation tracking.
+Installation
+Clone the Repository:
+
+bash
+Copy code
+git clone https://github.com/yourusername/IT_help_desk.git
+cd IT_help_desk
+Set Up the Python Environment:
+
+bash
+Copy code
+python -m venv env
+source env/bin/activate  # On Windows, use `env\Scripts\activate`
+Install Dependencies:
+
+bash
+Copy code
+pip install -r requirements.txt
+Initialize the Database: Run the initialize_database.py script in the config directory to create the database and add default users:
+
+bash
+Copy code
+python config/initialize_database.py
+Configuration
+Update config/config.py with your specific configurations:
+
+Database Path (DB_PATH): Defines the path to the SQLite database (helpdesk.db).
+Mistral 7B AI (MISTRAL_API_ENDPOINT, MISTRAL_API_KEY): API endpoint and key for AI integration.
+App Settings: Update the app title, version, and resource directories as needed.
+Usage
+Run the Application:
+
+bash
+Copy code
+python main.py
+Logging In:
+
+Default users (alice, bob, charlie) have been added for testing.
+Log in with one of these usernames or any additional users you set up.
+Using the Application:
+
+Submit Ticket: Accessed by all users to report issues.
+View Tickets: Allows users to view their own tickets and technicians/managers to view team tickets.
+Manage Tickets: For assigning and updating ticket statuses.
+AI Assistant: Uses Mistral 7B to provide initial responses or troubleshooting help.
+
+Project Structure
+
+IT_help_desk/
+├── config/
+│   ├── config.py                   # Configurations for database, logging, and app settings
+│   └── initialize_database.py      # Script for initializing the database
+├── database/
+│   ├── helpdesk.db                 # SQLite database file
+│   └── db_manager.py               # Helper for executing database queries
+├── helpers/
+│   ├── ai_response_thread.py       # Thread for handling AI responses
+│   └── utilities.py                # Logging and utility functions
+├── logs/
+│   └── app.log                     # Log file for tracking app events and errors
+├── models/
+│   ├── ticket_model.py             # Model for ticket operations
+│   └── user_model.py               # Model for user operations
+├── resources/
+│   ├── icons/                      # App icons and images
+│   └── styles.qss                  # Custom styling for the app
+├── ui/
+│   ├── ai_assistant_tab.py         # UI for the AI assistant tab
+│   ├── main_window.py              # Main application window
+│   ├── manage_tickets_tab.py       # UI for managing tickets
+│   ├── submit_ticket_tab.py        # UI for submitting tickets
+│   └── view_tickets_tab.py         # UI for viewing tickets
+├── app_icon.png                    # Application icon
+├── check_tables.py                 # Script to verify database tables
+├── HelpDeskApp.py                  # Main entry for the PyQt5 application
+├── LICENSE                         # License file
+├── main.py                         # Alternate entry point for starting the app
+└── README.md                       # Project documentation
+
+Future Improvements
+These potential features and upgrades aim to enhance the IT Help Desk application, making it more adaptable, secure, and efficient for diverse user roles.
+
+1. Role-Based Access and Permissions
+Expanded User Roles: Introduce additional roles like Admin, Manager, and Technician to enhance permissions.
+Permissions Matrix:
+User: Submit and view personal tickets.
+Technician: View, manage, and resolve tickets.
+Manager: Assign tickets, view reports, and oversee technicians.
+Admin: Manage users, configure settings, and generate reports.
+Implementation:
+Define roles and permissions in the database.
+Use role-based tab visibility in MainWindow and add role-specific menu options, e.g., Manage Users for Admins.
+2. Enhanced Ticket Management
+Status Tracking: Add status options like In Progress, Awaiting Customer Response, and Closed.
+Priority Levels: Enable users to assign priority levels (Low, Medium, High, Urgent) to tickets, with display ordering by priority and status.
+Assignment and Notifications:
+Enable Managers to assign tickets to specific technicians.
+Send email notifications when tickets are created, updated, or closed.
+Comments Section: Add a discussion thread to each ticket for interaction between users and technicians, sorted chronologically.
+3. AI-Powered Features (Mistral 7B Integration)
+Automated Ticket Response: Use Mistral 7B for initial troubleshooting by providing potential solutions or guidance when a ticket is submitted.
+Predictive Analysis: Categorize issues based on keywords and recommend assignments to technicians based on historical data.
+AI Chatbot Integration: Implement a chatbot to handle simple support queries, answer FAQs, or collect details before a human takes over.
+4. Reporting and Analytics
+Role-Specific Dashboards:
+Managers and Admins: View key metrics like resolved tickets, average resolution time, open ticket counts, and ticket trends.
+Detailed Reports: Generate CSV/PDF reports on resolution time, user satisfaction, and technician performance.
+Real-Time Tracking: Display ticket counts across categories and status (e.g., open, closed, high-priority tickets).
+5. Advanced User Management and Authentication
+User Profiles and Roles Management: Enable Admins to add, edit, and deactivate users.
+Two-Factor Authentication (2FA): Add an option for 2FA to enhance security.
+User Settings and Preferences: Allow users to customize notification preferences, view activity history, and manage profile details.
+6. Knowledge Base Integration
+FAQ and Troubleshooting Guides: Create a repository of articles on common issues with solutions linked to the ticket form.
+AI-Powered Knowledge Search: Use Mistral 7B to power a search function that suggests relevant articles based on ticket keywords.
+7. Automated SLA Management
+SLA Rules and Notifications:
+Set SLA rules for response and resolution times, alerting users if tickets are nearing or breaching SLA limits.
+Escalation Management: Automatically escalate high-priority or overdue tickets to Managers or Admins.
+8. Enhanced UI and User Experience
+Customizable Dashboard: Allow users to personalize their dashboard layout and content based on role.
+Theme Options: Add light and dark theme support for better user experience.
+Filtering and Search: Enable filtering of tickets by status, priority, or keyword.
+9. Integrations with External Systems
+Email and Calendar Integration: Link with email and calendar apps to notify users of ticket changes or schedule meetings.
+Help Desk API: Create an API for external systems to interact with the ticket system.
+Collaboration Tool Integrations: Integrate with Slack, Microsoft Teams, or Discord for real-time ticket updates and alerts.
+Sample Role-Based Implementation
+Below is an example of how the MainWindow class could be expanded to support role-based access:
+
+
+class MainWindow(QMainWindow):
+    def __init__(self, user_id, user_role):
+        super().__init__()
+        self.user_id = user_id
+        self.user_role = user_role
+        self.setWindowTitle("IT Help Desk")
+        self.setGeometry(100, 100, 1000, 700)
+
+        self.tabs = QTabWidget()
+        self.setCentralWidget(self.tabs)
+
+        # Add common tabs for all users
+        self.tabs.addTab(SubmitTicketTab(self.user_id), "Submit Ticket")
+        self.tabs.addTab(ViewTicketsTab(self.user_id, self.user_role), "View Tickets")
+
+        # Add additional tabs based on role
+        if self.user_role in ['technician', 'manager', 'admin']:
+            self.tabs.addTab(ManageTicketsTab(self.user_role), "Manage Tickets")
+
+        if self.user_role == 'admin':
+            self.tabs.addTab(UserManagementTab(), "User Management")
+
+Additional Tabs and Classes
+UserManagementTab: For Admins to manage users and assign roles.
+ManageTicketsTab: Allows technicians and managers to filter, assign, and resolve tickets with status and priority settings.
