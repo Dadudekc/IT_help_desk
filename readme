@@ -36,7 +36,7 @@ Clone the Repository:
 
 bash
 Copy code
-git clone https://github.com/yourusername/IT_help_desk.git
+git clone https://github.com/dadudekc/IT_help_desk.git
 cd IT_help_desk
 Set Up the Python Environment:
 
