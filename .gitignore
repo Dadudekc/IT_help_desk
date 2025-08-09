@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+.env
+.env.*
+.idea/
+.vscode/
+.DS_Store
+
+# Node
+node_modules/
+.npm/
+coverage/
+dist/
+build/
+*.log
+
+# Others
+*.sqlite3
+*.db
+*.log
+logs/
